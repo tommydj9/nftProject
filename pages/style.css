@@ -44,6 +44,12 @@
     left: 35px;
 }
 
+.img:hover{
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+}
+
 .acc{
 
     display: flex;
@@ -191,4 +197,19 @@
     position: absolute;
     left: 180px;
     top: 80px;
+}
+
+.nav2{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 450px;
+}
+
+.footer2{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+    background-color: #262c6e;
 }

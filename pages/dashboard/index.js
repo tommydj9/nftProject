@@ -32,13 +32,6 @@ function Dashboard() {
   let selected_img = img[index];
 
 
-
-
-
-
-
-
-
   console.log(selected_img);
   const fileUrl = selected_img;
 
@@ -46,14 +39,10 @@ function Dashboard() {
 
     setIsLoading(true);
     e.preventDefault();
+    debugger;
 
     try {
-
-
-
-
-
-
+      console.log('is entry');
       // These will be retrieved from a list of mintable NFTs, coming from a server/table
 
       const fileValue = "10000000000000000"; // Wei --> 0.01 ETH
@@ -69,6 +58,7 @@ function Dashboard() {
         base64: Buffer.from(JSON.stringify(metadata)).toString("base64"),
       });
       await file.saveIPFS();
+      console.log('is entry');
       const metadataurl = file.ipfs();
 
       // Interact with smart contract
@@ -79,6 +69,11 @@ function Dashboard() {
 
       // Get token id
       const tokenSendEthId = response.events.Transfer.returnValues.tokenId;
+
+
+
+      // Get token id
+      // const tokenSendEthId = response.events.Transfer.returnValues.tokenId;
 
       // const sendEth = async () => {
       //   try {
@@ -130,14 +125,11 @@ function Dashboard() {
         </div>
       }
       <form onSubmit={onSubmit}>
-
-
-
         <div>
 
+          <img src='/images/logo.png' onClick={logout} className="w-40 h-40 img" />
 
-
-          <nav class="bg-gray-800 py-1 rounded-md navbar2">
+          <nav class="bg-gray-800 py-1 rounded-md navbar2 nav2">
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
               <div class="relative flex items-center justify-between h-16">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -221,7 +213,7 @@ function Dashboard() {
 
 
           </button>
-          <h2 className="address">{contractAddress}</h2>
+          {/* <h2 className="address">{{ from: user.get("ethAddress") }}</h2> */}
           <input
             type="text"
             className="border-[1px] p-2 text-lg border-black w-full"
@@ -261,13 +253,13 @@ function Dashboard() {
         </button>
 
 
-        <footer class="p-4 sm:p-6 dark:bg-gray-900 footer" className='footer'>
+        <footer class="p-4 sm:p-6 dark:bg-gray-900 footer2">
           <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
               <a href="https://flowbite.com/" class="flex items-center">
                 <img src="/images/logo.png" class="mr-3 h-8" alt="FlowBite Logo" img />
 
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">NftMinter</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DeathTune™</span>
                 <h1 className="testo">hd</h1>
               </a>
             </div>
@@ -309,7 +301,7 @@ function Dashboard() {
           </div>
           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" hr />
           <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">NftMinter™</a>. All Rights Reserved.
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">DeathTune™</a>. All Rights Reserved.
             </span>
             <h1 className="testo">sh</h1>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
