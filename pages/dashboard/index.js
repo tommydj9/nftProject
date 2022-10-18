@@ -217,7 +217,7 @@ function Dashboard() {
 
 
 
-          {/* <h2 className="address">address={user.get('ethAddress')}</h2> */}
+
           <input
             type="text"
             className="border-[1px] p-2 text-lg border-black w-full"
