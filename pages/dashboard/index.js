@@ -4,6 +4,7 @@ import { useMoralis } from "react-moralis";
 import Moralis from "moralis";
 import { contractABI, contractAddress } from "../../contract";
 import Web3 from "web3";
+import { func } from "prop-types";
 
 
 const web3 = new Web3(Web3.givenProvider);
@@ -18,6 +19,11 @@ function Dashboard() {
 
   const name = _name.trim();
   const description = _description.trim();
+
+
+  // alert(user.get("ethAddress"));
+
+
 
 
 
@@ -205,15 +211,13 @@ function Dashboard() {
           </nav>
 
 
+
           <img src={selected_img} className='w-50 h-60 prevImg'></img>
-          <button className="flex justify-left">
+          <button className="flex justify-left"></button>
 
 
 
-
-
-          </button>
-          {/* <h2 className="address">{{ from: user.get("ethAddress") }}</h2> */}
+          {/* <h2 className="address">address={user.get('ethAddress')}</h2> */}
           <input
             type="text"
             className="border-[1px] p-2 text-lg border-black w-full"
