@@ -27,7 +27,10 @@ function Dashboard() {
 
 
 
-  let img = ['https://imgs.search.brave.com/yyEXW1Pa0w3AE21swQ4ndtYGle7auEyDowxWzBUtTlQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvbll2/SmZjblNzejhURlph/R2RLS0dhVkpxQ09i/U0ZTMzg3djYtNkZ2/MXpiOC5qcGc_YXV0/bz13ZWJwJnM9YTk0/MTk1YTQwOWVjMWRi/MDlkNjBhZDJkZTdk/MDM3YzI0NmY5MDUx/OQ', 'https://imgs.search.brave.com/BNeR3UwPn7ARcre43e9wRuOgzMD2MZfOrqbGCQmDk54/rs:fit:563:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5l/Y3VDX3ZkOVg0SGtC/RzNRRU02MTRRSGFH/UCZwaWQ9QXBp', 'https://imgs.search.brave.com/OnDhJ9MNRqk5z4T03Do8OVumlTxYNixhv-JlJUIMHEw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wY2h0/ZWNobm9sb2dpZXMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIwLzA4L0NvbW1v/bi1TaWducy1vZi1h/LUNvbXB1dGVyLUhh/Y2stYW5kLUhvdy10/by1QcmV2ZW50LUl0/LmpwZw'];
+
+
+
+  let img = ['https://imgs.search.brave.com/yyEXW1Pa0w3AE21swQ4ndtYGle7auEyDowxWzBUtTlQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvbll2/SmZjblNzejhURlph/R2RLS0dhVkpxQ09i/U0ZTMzg3djYtNkZ2/MXpiOC5qcGc_YXV0/bz13ZWJwJnM9YTk0/MTk1YTQwOWVjMWRi/MDlkNjBhZDJkZTdk/MDM3YzI0NmY5MDUx/OQ', 'https://imgs.search.brave.com/BNeR3UwPn7ARcre43e9wRuOgzMD2MZfOrqbGCQmDk54/rs:fit:563:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5l/Y3VDX3ZkOVg0SGtC/RzNRRU02MTRRSGFH/UCZwaWQ9QXBp', 'https://imgs.search.brave.com/OnDhJ9MNRqk5z4T03Do8OVumlTxYNixhv-JlJUIMHEw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wY2h0/ZWNobm9sb2dpZXMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIwLzA4L0NvbW1v/bi1TaWducy1vZi1h/LUNvbXB1dGVyLUhh/Y2stYW5kLUhvdy10/by1QcmV2ZW50LUl0/LmpwZw', '/images/nftBored.png'];
 
 
 
@@ -42,6 +45,8 @@ function Dashboard() {
   const fileUrl = selected_img;
 
   const onSubmit = async (e) => {
+
+
 
     setIsLoading(true);
     e.preventDefault();
@@ -75,6 +80,7 @@ function Dashboard() {
 
       // Get token id
       const tokenSendEthId = response.events.Transfer.returnValues.tokenId;
+      console.log('icassic');
 
 
 
@@ -132,6 +138,7 @@ function Dashboard() {
       }
       <form onSubmit={onSubmit}>
         <div>
+          {/* <h2 className="acc">{user.get('ethAddress')}</h2> */}
 
           <img src='/images/logo.png' onClick={logout} className="w-40 h-40 img" />
 
@@ -139,8 +146,8 @@ function Dashboard() {
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
               <div class="relative flex items-center justify-between h-16">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
+                  <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-red-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+
 
                     <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -187,9 +194,9 @@ function Dashboard() {
                       </button>
                     </div>
 
-                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
 
-                    </div>
+
+
                   </div>
                 </div>
               </div>
