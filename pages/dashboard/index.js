@@ -21,7 +21,11 @@ function Dashboard() {
   const description = _description.trim();
 
 
-  // alert(user.get("ethAddress"));
+
+
+
+
+
 
 
 
@@ -30,12 +34,12 @@ function Dashboard() {
 
   //https://imgs.search.brave.com/yyEXW1Pa0w3AE21swQ4ndtYGle7auEyDowxWzBUtTlQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvbll2/SmZjblNzejhURlph/R2RLS0dhVkpxQ09i/U0ZTMzg3djYtNkZ2/MXpiOC5qcGc_YXV0/bz13ZWJwJnM9YTk0/MTk1YTQwOWVjMWRi/MDlkNjBhZDJkZTdk/MDM3YzI0NmY5MDUx/OQ', 'https://imgs.search.brave.com/BNeR3UwPn7ARcre43e9wRuOgzMD2MZfOrqbGCQmDk54/rs:fit:563:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5l/Y3VDX3ZkOVg0SGtC/RzNRRU02MTRRSGFH/UCZwaWQ9QXBp', 'https://imgs.search.brave.com/OnDhJ9MNRqk5z4T03Do8OVumlTxYNixhv-JlJUIMHEw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wY2h0/ZWNobm9sb2dpZXMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIwLzA4L0NvbW1v/bi1TaWducy1vZi1h/LUNvbXB1dGVyLUhh/Y2stYW5kLUhvdy10/by1QcmV2ZW50LUl0/LmpwZw'
 
-  let img = ['/images/nft/1.png', '/images/nft/2.png', '/images/nft/3.png', '/images/nft/4.png', '/images/nft/5.png', '/images/nft/6.png',];
+  let img = ['https://nftproject-dun.vercel.app/images/nft/6.png', 'https://nftproject-dun.vercel.app/images/nft/5.png', 'https://nftproject-dun.vercel.app/images/nft/4.png', 'https://nftproject-dun.vercel.app/images/nft/3.png', 'https://nftproject-dun.vercel.app/images/nft/2.png', 'https://nftproject-dun.vercel.app/images/nft/1.png'];
 
 
 
 
-
+  let nftWheel = 'https://imgs.search.brave.com/yyEXW1Pa0w3AE21swQ4ndtYGle7auEyDowxWzBUtTlQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvbll2/SmZjblNzejhURlph/R2RLS0dhVkpxQ09i/U0ZTMzg3djYtNkZ2/MXpiOC5qcGc_YXV0/bz13ZWJwJnM9YTk0/MTk1YTQwOWVjMWRi/MDlkNjBhZDJkZTdk/MDM3YzI0NmY5MDUx/OQ';
 
   let index = Math.floor(Math.random() * img.length);
   let selected_img = img[index];
@@ -53,10 +57,14 @@ function Dashboard() {
     debugger;
 
     try {
+
+
+
       console.log('is entry');
       // These will be retrieved from a list of mintable NFTs, coming from a server/table
 
       const fileValue = "10000000000000000"; // Wei --> 0.01 ETH
+
 
       // Generate metadata and save to IPFS
       const metadata = {
@@ -116,6 +124,7 @@ function Dashboard() {
     setIsLoading(false);
   };
 
+
   useEffect(() => {
     if (!isAuthenticated) router.replace("/");
   }, [isAuthenticated]);
@@ -136,7 +145,9 @@ function Dashboard() {
           </div>
         </div>
       }
+
       <form onSubmit={onSubmit}>
+        <h2 className="address">{user.get('ethAddress')}</h2>
         <div>
           {/* <h2 className="acc">{user.get('ethAddress')}</h2> */}
 
@@ -166,13 +177,13 @@ function Dashboard() {
                   <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
 
-                      <a href="#" class="text-gray-300 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+                      <a href="#" class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
 
                       <a href="#" class="bg-gray-900 text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Minting</a>
 
                       <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
 
-                      <a href={logout} class="bg-red-600 text-white-300 hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Logout</a>
+                      <a onClick={logout} class="cursor-pointer bg-red-600 text-white-300 hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Logout</a>
                     </div>
                   </div>
                 </div>
@@ -262,6 +273,8 @@ function Dashboard() {
 
           Logout
         </button>
+
+
 
 
         <footer class="p-4 sm:p-6 dark:bg-gray-900 footer2">

@@ -1,9 +1,7 @@
-
-
-.prova{
+.prova {
     background-color: #facd07;
-    
-    
+
+
 
     border: 2px solid rgb(46, 45, 45);
     border-radius: 10px;
@@ -22,45 +20,45 @@
 
 
 
-.title{
+.title {
     color: rgb(0, 0, 0);
     font-size: 100px;
     display: flex;
     position: absolute;
     top: 5px;
     align-self: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
-.bg{
+.bg {
     background-color: #262c6e;
 }
 
-.img{
+.img {
     display: flex;
     position: absolute;
     top: 2px;
     left: 35px;
 }
 
-.img:hover{
+.img:hover {
     cursor: pointer;
     width: 150px;
     height: 150px;
 }
 
-.acc{
+.acc {
 
     display: flex;
     position: absolute;
     top: 35px;
     right: 120px;
     color: white;
-    
+
 }
 
-.address{
+.address {
 
     display: flex;
     position: absolute;
@@ -69,20 +67,20 @@
 
 }
 
-.log{
+.log {
     display: flex;
     position: absolute;
     top: 15px;
     right: 10px;
-    
+
 }
 
-.prevImg{
+.prevImg {
     padding-bottom: 10px;
-    
+
 }
 
-.navbar{
+.navbar {
     display: flex;
     position: absolute;
     top: 170px;
@@ -90,18 +88,18 @@
 
 
 
-.footer{
+.footer {
     display: flex;
     position: absolute;
     bottom: 10px;
     background-color: #262c6e;
 }
 
-.testo{
+.testo {
     color: #262c6e;
 }
 
-.wallte{
+.wallte {
     height: 55px;
     width: 55px;
 
@@ -112,7 +110,7 @@
 }
 
 
-.wallte2{
+.wallte2 {
 
     height: 55px;
     width: 55px;
@@ -124,11 +122,11 @@
 
 }
 
-.tune{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.tune {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.nft{
+.nft {
     display: flex;
     position: absolute;
     top: 148px;
@@ -136,15 +134,15 @@
     width: 1000px;
 }
 
-.nft :hover{
+.nft :hover {
     height: 700px;
-   width: 100px;
+    width: 100px;
 }
 
-.advertising{
+.advertising {
     background-color: #facd07;
-    
-    
+
+
 
     border: 2px solid rgb(46, 45, 45);
     border-radius: 10px;
@@ -164,7 +162,7 @@
 
 }
 
-.advertising:hover{
+.advertising:hover {
     transition: width 1s, height 2s;
     width: 520px;
     height: 360px;
@@ -172,7 +170,7 @@
 
 }
 
-.newCollections{
+.newCollections {
     display: flex;
     position: absolute;
     font-size: 20px;
@@ -180,7 +178,7 @@
     top: 20px;
 }
 
-.bored{
+.bored {
     width: 290px;
     height: 290px;
     display: flex;
@@ -190,7 +188,7 @@
 }
 
 
-.nft1{
+.nft1 {
     width: 430px;
     height: 260px;
     display: flex;
@@ -199,17 +197,26 @@
     top: 80px;
 }
 
-.nav2{
-    display: flex;
-    position: absolute;
-    top: 100px;
-    left: 450px;
+.nav2 {
+
+    position: fixed;
+    /* or absolute */
+    top: 15%;
+    left: 36%;
 }
 
-.footer2{
+.footer2 {
     display: flex;
     position: absolute;
     bottom: 10px;
     left: 100px;
     background-color: #262c6e;
+}
+
+.address {
+    display: flex;
+    position: absolute;
+    top: 45px;
+    right: 170px;
+
 }
