@@ -18,6 +18,7 @@ export default function Home() {
   function avvertimento() {
     alert('You have to do the login if you wanna acces to this page');
   }
+  console.log('dddd');
 
 
 
