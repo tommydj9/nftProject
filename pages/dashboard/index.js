@@ -7,27 +7,47 @@ import Web3 from "web3";
 import { func } from "prop-types";
 
 
+
 const web3 = new Web3(Web3.givenProvider);
 
 function Dashboard() {
-  const { isAuthenticated, logout } = useMoralis();
+  const { isAuthenticated, logout, isInitialized } = useMoralis();
   const [_name, setName] = useState("");
   const [_description, setDescription] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [index, setIndex] = useState(0);
+
 
   const router = useRouter();
 
   const name = _name.trim();
   const description = _description.trim();
 
+  let img = ['https://nftproject-dun.vercel.app/images/nft/6.png', 'https://nftproject-dun.vercel.app/images/nft/5.png', 'https://nftproject-dun.vercel.app/images/nft/4.png', 'https://nftproject-dun.vercel.app/images/nft/3.png', 'https://nftproject-dun.vercel.app/images/nft/2.png', 'https://nftproject-dun.vercel.app/images/nft/1.png'];
+  let user;
+  useEffect(() => {
 
+    if (!isAuthenticated) {
+      router.replace('/')
+    }
+    else {
+
+
+
+      user = Moralis.User.current();
+      let address = parseInt(user.get('ethAddress'), 16)
+      const i = address % img.length;
+      console.log('set', i, address);
+      setIndex(i);
+
+    }
+  }, [isAuthenticated]);
 
 
 
 
   //https://imgs.search.brave.com/yyEXW1Pa0w3AE21swQ4ndtYGle7auEyDowxWzBUtTlQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvbll2/SmZjblNzejhURlph/R2RLS0dhVkpxQ09i/U0ZTMzg3djYtNkZ2/MXpiOC5qcGc_YXV0/bz13ZWJwJnM9YTk0/MTk1YTQwOWVjMWRi/MDlkNjBhZDJkZTdk/MDM3YzI0NmY5MDUx/OQ', 'https://imgs.search.brave.com/BNeR3UwPn7ARcre43e9wRuOgzMD2MZfOrqbGCQmDk54/rs:fit:563:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5l/Y3VDX3ZkOVg0SGtC/RzNRRU02MTRRSGFH/UCZwaWQ9QXBp', 'https://imgs.search.brave.com/OnDhJ9MNRqk5z4T03Do8OVumlTxYNixhv-JlJUIMHEw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wY2h0/ZWNobm9sb2dpZXMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIwLzA4L0NvbW1v/bi1TaWducy1vZi1h/LUNvbXB1dGVyLUhh/Y2stYW5kLUhvdy10/by1QcmV2ZW50LUl0/LmpwZw'
 
-  let img = ['https://nftproject-dun.vercel.app/images/nft/6.png', 'https://nftproject-dun.vercel.app/images/nft/5.png', 'https://nftproject-dun.vercel.app/images/nft/4.png', 'https://nftproject-dun.vercel.app/images/nft/3.png', 'https://nftproject-dun.vercel.app/images/nft/2.png', 'https://nftproject-dun.vercel.app/images/nft/1.png'];
 
 
 
@@ -36,13 +56,7 @@ function Dashboard() {
 
   // let index = Math.floor(Math.random() * img.length);
 
-  const user = Moralis.User.current();
 
-
-  let index = 0;
-  if (user) {
-    index = parseInt(user.get('ethAddress'), 16) % img.length;
-  } else { console.log('error') }
 
 
   let selected_img = img[index];
@@ -65,7 +79,7 @@ function Dashboard() {
       console.log('is entry');
       // These will be retrieved from a list of mintable NFTs, coming from a server/table
 
-      const fileValue = "10000000000000000"; // Wei --> 0.01 ETH
+      const fileValue = "9999999999999999"; // Wei --> 0.01 ETH
 
 
       // Generate metadata and save to IPFS
