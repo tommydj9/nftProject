@@ -10,7 +10,7 @@ import { func } from "prop-types";
 const web3 = new Web3(Web3.givenProvider);
 
 function Dashboard() {
-  const { isAuthenticated, logout, user } = useMoralis();
+  const { isAuthenticated, logout } = useMoralis();
   const [_name, setName] = useState("");
   const [_description, setDescription] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -19,13 +19,6 @@ function Dashboard() {
 
   const name = _name.trim();
   const description = _description.trim();
-
-
-
-
-
-
-
 
 
 
@@ -41,9 +34,18 @@ function Dashboard() {
 
   let nftWheel = 'https://imgs.search.brave.com/yyEXW1Pa0w3AE21swQ4ndtYGle7auEyDowxWzBUtTlQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvbll2/SmZjblNzejhURlph/R2RLS0dhVkpxQ09i/U0ZTMzg3djYtNkZ2/MXpiOC5qcGc_YXV0/bz13ZWJwJnM9YTk0/MTk1YTQwOWVjMWRi/MDlkNjBhZDJkZTdk/MDM3YzI0NmY5MDUx/OQ';
 
-  let index = Math.floor(Math.random() * img.length);
-  let selected_img = img[index];
+  // let index = Math.floor(Math.random() * img.length);
 
+  const user = Moralis.User.current();
+
+
+  let index = 0;
+  if (user) {
+    index = parseInt(user.get('ethAddress'), 16) % img.length;
+  } else { console.log('error') }
+
+
+  let selected_img = img[index];
 
   console.log(selected_img);
   const fileUrl = selected_img;
@@ -147,7 +149,7 @@ function Dashboard() {
       }
 
       <form onSubmit={onSubmit}>
-        <h2 className="address">{user.get('ethAddress')}</h2>
+        {/* <h2 className="address">{user.get('ethAddress')}</h2> */}
         <div>
           {/* <h2 className="acc">{user.get('ethAddress')}</h2> */}
 
