@@ -148,6 +148,25 @@ function Dashboard() {
       }
 
       {mint ? <div>Successo</div> : <div>{err}</div>}
+      {err ? <main class="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
+        <h1 class="text-9xl font-extrabold text-white tracking-widest">404</h1>
+        <div class="bg-[#FF6A3D] px-2 text-sm rounded rotate-12 absolute">
+          Page Not Found
+        </div>
+        <button class="mt-5">
+          <a
+            class="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring"
+          >
+            <span
+              class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0"
+            ></span>
+
+            <span class="relative block px-8 py-3 bg-[#1A2238] border border-current">
+              <router-link to="/">Go Home</router-link>
+            </span>
+          </a>
+        </button>
+      </main> : null}
 
 
 
@@ -157,6 +176,7 @@ function Dashboard() {
           {/* <h2 className="acc">{user.get('ethAddress')}</h2> */}
 
           <img src='/images/logo.png' onClick={logout} className="w-40 h-40 img" />
+          <h1 className="title2">DeathTune</h1>
 
           <nav class="bg-gray-800 py-1 rounded-md navbar2 nav2">
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
