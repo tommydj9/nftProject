@@ -1,0 +1,183 @@
+h1 {
+    font-size: 7em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.page {
+    margin: 0 auto;
+    width: 30em;
+
+    #AnnucementText {
+        padding-top: 0.1em;
+        padding-bottom: 0.5em;
+        text-align: center;
+        color: aliceblue;
+        font-size: 1.3em;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #nftTitle {
+        padding-top: 0em;
+        padding-bottom: 0.2em;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: 2em;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+    }
+}
+
+body {
+    background-color: #262c6e;
+
+}
+
+nav {
+
+    color: #FFFFF4;
+    text-align: center;
+    font-weight: 500;
+
+    ul {
+
+        display: inline-block;
+        background-color: rgb(31, 41, 55);
+        border: 1px solid rgb(31, 41, 55);
+        border-radius: 0.4em;
+        padding: 1em 2em;
+    }
+
+
+    #logo {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        padding: 0.1em;
+    }
+
+    .home {
+        background-color: rgb(22, 29, 40);
+    }
+
+    // #wallet {
+    //     width: 2rem;
+    //     height: 2rem;
+    //     display: inline-block;
+    //     padding: 0.1em;
+
+
+    // }
+
+
+    li {
+        display: inline-block;
+        padding: 0.3em 0.5em;
+        margin: 0 0.4em;
+        border-radius: 0.375em;
+
+
+
+    }
+
+    ul :hover {
+        background-color: #374151;
+        cursor: pointer;
+    }
+
+    li.logBtn {
+        color: rgb(0, 0, 0);
+        background-color: #facd07;
+        cursor: pointer;
+    }
+
+    li.logBtn :hover {
+        color: rgb(0, 0, 0);
+        background-color: #facd07;
+        cursor: pointer;
+    }
+
+    li.slogBtn {
+        color: rgb(0, 0, 0);
+        background-color: #cd0000;
+        cursor: pointer;
+    }
+
+    li.slogBtn :hover {
+        color: rgb(0, 0, 0);
+        background-color: #cd0000;
+        cursor: pointer;
+    }
+
+    .Dash {
+        background-color: rgb(22, 29, 40);
+    }
+
+
+}
+
+
+
+div.content {
+    padding-right: 0.001em;
+    padding-top: 5em;
+
+    #adv :hover {
+        transition: width 1s, height 2s;
+        width: 520px;
+        height: 360px;
+    }
+
+    #adv {
+        width: 40rem;
+        background-image: url(../public/images/nftBored.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+
+        #card {
+            img {
+                width: 80rem;
+            }
+
+            margin-left: 7em;
+
+
+        }
+
+    }
+
+
+
+    #advBtn {
+        margin: 0 auto;
+        background-color: #facd07;
+        border: 1px #facd07 solid;
+        border-radius: 1em;
+        width: 35em;
+        padding: 2em;
+
+    }
+
+    .mintImg {
+        margin-top: 0.1em;
+        padding-left: 1.22em;
+        padding-right: 1em;
+    }
+
+    .mintBtn {
+        margin-left: 4em;
+        margin-top: 2em;
+        padding: 1em;
+        width: 20em;
+        height: 4em;
+    }
+
+    .loading {
+        height: 100%;
+        width: 100%;
+    }
+
+
+}

@@ -200,7 +200,7 @@
 .nav2 {
 
     position: fixed;
-    /* or absolute */
+
     top: 15%;
     left: 36%;
 }
@@ -219,4 +219,15 @@
     top: 45px;
     right: 170px;
 
+}
+
+.title2 {
+    color: rgb(0, 0, 0);
+    font-size: 100px;
+    display: flex;
+    position: absolute;
+    top: 1px;
+    right: 730px;
+    align-self: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
