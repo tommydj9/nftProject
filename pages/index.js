@@ -26,9 +26,12 @@ export default function Home() {
       <Head>
         <title>DeathTune™</title>
         <link rel="icon" href="/images/logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <header>
+        <img id='logo'
+          src="images/logo.png" />
         <h1>DeathTune</h1>
       </header>
 
@@ -52,23 +55,21 @@ export default function Home() {
 
       <div className="content">
         <h3 id="AnnucementText">New collections</h3>
-        <button onClick={authenticate} id="advBtn">
+        <div onClick={authenticate} id="advPanel">
           <h3 id="nftTitle">DeathTune™</h3>
           <div id="adv">
-
-
-
             <div id="card">
 
               {/*rifare il css html */}
-              <img src="images/nftProject2.png"></img>
+              <img src="images/card3.png"></img>
             </div>
-
           </div>
-        </button>
 
 
+        </div>
       </div>
+
+
     </div>
   );
 

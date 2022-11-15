@@ -1,12 +1,56 @@
-h1 {
+header {
     font-size: 7em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
+
+    // background-image: url(../public/images/logo.png);
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // background-position: 2rem center;
+    // padding-left: 3rem;
+    h1 {
+        display: inline-block;
+    }
+
+    #logo {
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        position: absolute;
+        left: 2rem;
+
+    }
 }
 
+@media (max-width: 852px) {
+    header {
+        font-size: 7em;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+
+        // background-image: url(../public/images/logo.png);
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        // background-position: 2rem center;
+        // padding-left: 3rem;
+        h1 {
+            display: inline-block;
+        }
+
+        #logo {
+            width: 0rem;
+            height: 0rem;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+    }
+}
+
+
 .page {
-    margin: 0 auto;
-    width: 30em;
+
 
     #AnnucementText {
         padding-top: 0.1em;
@@ -36,6 +80,10 @@ body {
 
 nav {
 
+    margin: 0 auto;
+    width: 30em;
+
+
     color: #FFFFF4;
     text-align: center;
     font-weight: 500;
@@ -46,7 +94,7 @@ nav {
         background-color: rgb(31, 41, 55);
         border: 1px solid rgb(31, 41, 55);
         border-radius: 0.4em;
-        padding: 1em 2em;
+        padding: 1em 1em;
     }
 
 
@@ -120,45 +168,53 @@ nav {
 
 
 div.content {
+    margin: 0 auto;
+    width: 30em;
     padding-right: 0.001em;
     padding-top: 5em;
 
-    #adv :hover {
-        transition: width 1s, height 2s;
-        width: 520px;
-        height: 360px;
-    }
+    // #adv :hover {
+    //     transition: width 1s, height 2s;
+    //     width: 520px;
+    //     height: 360px;
+    // }
 
-    #adv {
-        width: 40rem;
-        background-image: url(../public/images/nftBored.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-
-
-        #card {
-            img {
-                width: 80rem;
-            }
-
-            margin-left: 7em;
-
-
-        }
-
-    }
-
-
-
-    #advBtn {
-        margin: 0 auto;
+    #advPanel {
+        cursor: pointer;
+        padding: 2rem;
         background-color: #facd07;
         border: 1px #facd07 solid;
         border-radius: 1em;
-        width: 35em;
-        padding: 2em;
+    }
+
+    #adv {
+        background-image: url(../public/images/boredApeNftFinal.png);
+        background-size: 50%;
+        background-position: center left;
+        background-repeat: no-repeat;
+
+
+
+
+
+        #card {
+            width: 50%;
+            margin-left: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+
 
     }
+
+
+
+
+
+
 
     .mintImg {
         margin-top: 0.1em;
