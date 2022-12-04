@@ -22,27 +22,11 @@ header {
     }
 }
 
-@media (max-width: 852px) {
+@media (max-width: 883px) {
     header {
-        font-size: 7em;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        text-align: center;
-
-        // background-image: url(../public/images/logo.png);
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        // background-position: 2rem center;
-        // padding-left: 3rem;
-        h1 {
-            display: inline-block;
-        }
 
         #logo {
-            width: 0rem;
-            height: 0rem;
-            display: flex;
-            flex-direction: row;
-
+            display: none;
         }
 
     }
@@ -53,8 +37,6 @@ header {
 
 
     #AnnucementText {
-        padding-top: 0.1em;
-        padding-bottom: 0.5em;
         text-align: center;
         color: aliceblue;
         font-size: 1.3em;
@@ -142,7 +124,7 @@ nav {
 
     li.logBtn :hover {
         color: rgb(0, 0, 0);
-        background-color: #facd07;
+        background-color: #c7a406;
         cursor: pointer;
     }
 
@@ -171,7 +153,7 @@ div.content {
     margin: 0 auto;
     width: 30em;
     padding-right: 0.001em;
-    padding-top: 5em;
+    padding-top: 2em;
 
     // #adv :hover {
     //     transition: width 1s, height 2s;
@@ -181,10 +163,15 @@ div.content {
 
     #advPanel {
         cursor: pointer;
-        padding: 2rem;
+        padding: 1.6rem;
         background-color: #facd07;
         border: 1px #facd07 solid;
         border-radius: 1em;
+    }
+
+    #advPanel:hover {
+        background-color: #bd9b04;
+        border: 1px #bd9b04 solid;
     }
 
     #adv {
@@ -235,5 +222,59 @@ div.content {
         width: 100%;
     }
 
+
+
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+
+
+    .footerSection {
+        padding: 0 2rem 2rem 2rem;
+
+        li {
+            padding: 0.3rem 0;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding-bottom: 0.3rem;
+        }
+    }
+
+    #footerTitle h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        background-image: url(../public/images/logo.png);
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-left: 3.5rem;
+    }
+
+    #footerCopy {
+        align-self: center;
+
+        ul {
+            padding-left: 1rem;
+            display: inline-block;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        li svg {
+            display: inline;
+            padding-right: 0.5rem;
+            height: 1.5rem;
+        }
+    }
 
 }

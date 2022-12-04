@@ -1,4 +1,4 @@
-export const contractAddress = "0x32d4dc8c990bfd3e01741c279b6fa1585088d7aa";
+export const contractAddress = "0xF7E71839816a1e9ee58e7c89918B8d86F651F934";
 export const contractABI = [
   {
     "inputs": [],
@@ -133,6 +133,19 @@ export const contractABI = [
       }
     ],
     "name": "safeTransferFrom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "sendMoney",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -286,6 +299,19 @@ export const contractABI = [
         "internalType": "string",
         "name": "",
         "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
       }
     ],
     "stateMutability": "view",

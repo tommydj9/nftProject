@@ -65,7 +65,7 @@ function Dashboard() {
       console.log('is entry');
       // These will be retrieved from a list of mintable NFTs, coming from a server/table
 
-      const fileValue = "10000000000000000"; // Wei --> 0.01 ETH
+      const fileValue = "15000000000000000"; // Wei --> 0.01 ETH
       // Generate metadata and save to IPFS
       const metadata = {
         name,
